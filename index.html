@@ -301,13 +301,18 @@ function escribemodulo(st,st2){
 escribemodulo(modulo,vaquiennombre);
 
 
-firebase.database().ref().child("numerotv").on('value', function(snapshot) {
+firebase.database().ref().child("pasientesdeldia").on('value', function(snapshot) {
 
     arraynumerotv=snapshot.val();
 //for(var i in arraynumerotv){
 
- vaquiennombre=arraynumerotv.nombrepaciente;
- modulo=arraynumerotv.modulenum;
+for(var i in arraynumerotv.listapacientes){
+if(arraynumerotv.listapacientes[i].turno ==arraynumerotv.queturnova+1){}
+    vaquiennombre=arraynumerotv.listapacientes[i].nombre;
+ modulo=arraynumerotv.listapacientes[i].turno;
+
+}
+
 //}
 
 escribemodulo(modulo,vaquiennombre);
