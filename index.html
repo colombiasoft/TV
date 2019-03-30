@@ -26,8 +26,7 @@
     background-color: rgb(0, 0, 0);
 
     opacity: 0.8;
-    -webkit-animation: jump 5s ease 0s infinite normal ;
- animation: jump 5s ease 0s infinite normal ;
+
 }
 
 
@@ -78,68 +77,35 @@
   
 
     color: #19f9f8;
-
+    -webkit-animation: flipout 9s linear 9s infinite normal forwards;
+ animation: flipout 9s linear 9s infinite normal forwards;
 }
 
 
-      
-@-webkit-keyframes jump {
+
+@-webkit-keyframes flipout {
   0%{
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
-  }
-  20%{
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
-  }
-  40%{
-	-webkit-transform: translateY(-30px);
-	transform: translateY(-30px);
-  }
-  50%{
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
-  }
-  60%{
-	-webkit-transform: translateY(-15px);
-	transform: translateY(-15px);
-  }
-  80%{
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
+	opacity: 1;
+	-webkit-transform: perspective(400px) rotateY(0deg);
+	transform: perspective(400px) rotateY(0deg);
   }
   100%{
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
+	opacity: 0;
+	-webkit-transform: perspective(400px) rotateY(90deg);
+	transform: perspective(400px) rotateY(90deg);
   }
 }
 
-@keyframes jump {
+@keyframes flipout {
   0%{
-	transform: translateY(0);
-  }
-  20%{
-	transform: translateY(0);
-  }
-  40%{
-	transform: translateY(-30px);
-  }
-  50%{
-	transform: translateY(0);
-  }
-  60%{
-	transform: translateY(-15px);
-  }
-  80%{
-	transform: translateY(0);
+	opacity: 1;
+	transform: perspective(400px) rotateY(0deg);
   }
   100%{
-	transform: translateY(0);
+	opacity: 0;
+	transform: perspective(400px) rotateY(90deg);
   }
 }
-
-
-
 
 
 
